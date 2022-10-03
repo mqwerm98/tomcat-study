@@ -1,6 +1,6 @@
 package com.munzi.tomcat.study.socket3;
 
-public class HttpRequestLine {
+public class HttpRequestLine3 {
 
     public int[] protocol;
     public int protocolEnd;
@@ -9,7 +9,7 @@ public class HttpRequestLine {
     public int[] uri;
     public int uriEnd;
 
-    public HttpRequestLine() {
+    public HttpRequestLine3() {
     }
 
 

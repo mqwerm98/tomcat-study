@@ -1,4 +1,4 @@
-package com.munzi.tomcat.study.socket3;
+package com.munzi.tomcat.study.socket4;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,7 +14,7 @@ public class SocketInputStream extends InputStream {
         return 0;
     }
 
-    public void readRequestLine(HttpRequestLine requestLine) {
+    public void readRequestLine(HttpRequestLine4 requestLine) {
 
     }
 }

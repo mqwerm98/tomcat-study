@@ -15,6 +15,8 @@ public class HttpConnector implements Runnable {
     boolean stopped;
     private String scheme = "http";
 
+    SimpleContainer container;
+
     // processor pool
     private Stack<HttpProcessor> processors = new Stack<>();
 
@@ -103,5 +105,13 @@ public class HttpConnector implements Runnable {
 
         return processor;
 
+    }
+
+    public int getBufferSize() {
+        return 2048;
+    }
+
+    public void setContainer(SimpleContainer container) {
+        this.container = container;
     }
 }

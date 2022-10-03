@@ -1,8 +1,5 @@
 package com.munzi.tomcat.study.socket3;
 
-import com.munzi.tomcat.study.socket1.StaticResourceProcessor1;
-import com.munzi.tomcat.study.socket2.ServletProcessor2;
-
 import javax.servlet.ServletException;
 import java.io.OutputStream;
 import java.net.Socket;
@@ -12,7 +9,7 @@ public class HttpProcessor {
 
     private HttpRequest request;
     private HttpResponse response;
-    private HttpRequestLine requestLine = new HttpRequestLine();
+    private HttpRequestLine3 requestLine = new HttpRequestLine3();
 
 
     public HttpProcessor(HttpConnector httpConnector) {
@@ -20,11 +17,11 @@ public class HttpProcessor {
     }
 
     public void process(Socket socket) {
-        SocketInputStream input = null;
+        SocketInputStream3 input = null;
         OutputStream output = null;
 
         try {
-            input = new SocketInputStream(socket.getInputStream(), 2048);
+            input = new SocketInputStream3(socket.getInputStream(), 2048);
             output = socket.getOutputStream();
 
             request = new HttpRequest(input);
@@ -46,7 +43,7 @@ public class HttpProcessor {
         }
     }
 
-    private void parseRequest(SocketInputStream input, OutputStream output) throws ServletException {
+    private void parseRequest(SocketInputStream3 input, OutputStream output) throws ServletException {
         input.readRequestLine(requestLine);
         String method = new String(requestLine.method, 0, requestLine.methodEnd);
         String uri = null;
@@ -119,7 +116,7 @@ public class HttpProcessor {
         return null;
     }
 
-    private void parseHeaders(SocketInputStream input) {
+    private void parseHeaders(SocketInputStream3 input) {
 
     }
 

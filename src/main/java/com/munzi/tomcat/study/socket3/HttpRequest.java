@@ -21,7 +21,7 @@ public class HttpRequest implements HttpServletRequest {
 
     private boolean parsed = false;
 
-    public HttpRequest(SocketInputStream input) {
+    public HttpRequest(SocketInputStream3 input) {
 
     }
 

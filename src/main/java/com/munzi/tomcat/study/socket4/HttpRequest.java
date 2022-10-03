@@ -1,6 +1,6 @@
 package com.munzi.tomcat.study.socket4;
 
-import com.munzi.tomcat.study.socket3.SocketInputStream;
+import com.munzi.tomcat.study.socket3.SocketInputStream3;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -23,7 +23,7 @@ public class HttpRequest implements HttpServletRequest {
 
     private boolean parsed = false;
 
-    public HttpRequest(SocketInputStream input) {
+    public HttpRequest(SocketInputStream3 input) {
 
     }
 
